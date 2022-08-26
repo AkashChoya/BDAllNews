@@ -8,7 +8,6 @@ const body_perser = require("body-parser");
 
 
 // Security Middle Ware
-const rate_limit = require('express-rate-limit')
 const helmet = require('helmet')
 const mongo_sanitize = require('express-mongo-sanitize')
 const xss = require('xss-clean')
@@ -31,15 +30,6 @@ App.use(helmet())
 
 
 App.use(body_perser.json())
-
-// DataBase 
-// const mongos = require('mongoose');
-// let url = "mongodb+srv://FaceBook_01:FaceBook_01@cluster0.2blnx8s.mongodb.net/?retryWrites=true&w=majority"
-// let option ={user:"FaceBook_01", pass:"FaceBook_01", autoIndex:true}
-// mongos.connect(url, option, (error)=>{
-//     console.log("Connaction Success");
-//     console.log(error)
-// })
 
 
 const mongos = require('mongoose');
